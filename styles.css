@@ -1,0 +1,508 @@
+/* Resetting some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #011331, #1296de); /* Blue gradient */
+    color: #333;
+}
+
+
+/* Top Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-left ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-left ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: aqua;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+    color: aqua;
+    box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.5);
+    border-radius: 5px;
+    transform: translateY(-3px);
+}
+
+/* Right side - Search form and Hire Me button */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Search form styling */
+.search-form input {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+/* Hire Me button styling */
+.hire-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(2, 114, 28, 0.2);
+}
+#hire{
+    color: #f4eded;
+}
+
+.hire-btn:hover {
+    background-color: #ff8533;
+    box-shadow: 0px 6px 12px rgba(255, 101, 33, 0.4);
+}
+
+/* Section Styling */
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+/* About Section Styling */
+#about {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center align items vertically */
+    /* background-color: rgb(142, 214, 244);  */
+    padding: 20px; /* Padding for aesthetics */
+    width: 100%;
+    flex-direction: row;
+    gap: 20%;
+}
+
+
+.profile-img {
+    width: 150px; /* Set the width of the image */
+    height: 150px; /* Set the height of the image */
+    border-radius: 50%; /* Make the image circular */
+    box-shadow: 0px 4px 8px rgba(228, 10, 10, 0.2); /* Add shadow to the image */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.about-text {
+    background-color: rgb(11, 192, 216); /* Background color for text section */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(247, 247, 247, 0.2); /* Shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    max-width: 500px; /* Limit the width of the text block */
+}
+
+/* Hover effect for the text */
+.about-text:hover {
+    box-shadow: 0px 6px 12px rgba(240, 4, 4, 0.3); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* About section heading styling */
+.about-text h2 {
+    color: #a30f0f; /* Heading text color */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+/* About section paragraph styling */
+.about-text p {
+    color: #555; /* Paragraph text color */
+}
+
+
+/* Skills Section Styling */
+/* Skills Section Styling */
+/* Skills Section Styling */
+#skills {
+    padding: 20px; /* Add padding to the section */
+    /* background-color: rgb(28,157, 212); */
+    transition: transform 0.3s ease; /* Smooth transition for the section */
+}
+
+#skills div {
+    background-color: rgb(11, 191, 203); /* Set background color to yellow */
+    padding: 20px; /* Add padding inside the div */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(15, 200, 216, 0.2); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#skills div:hover {
+    box-shadow: 0px 6px 12px rgba(246, 48, 4, 0.3); /* Increase shadow on hover */
+    transform: scale(1.02); /* Slightly increase size on hover */
+}
+
+/* Skills List Styling */
+#skills ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+#skills li {
+    margin-bottom: 10px; /* Space between list items */
+    color: #333; /* Text color */
+    font-size: 1.1em; /* Slightly larger font size */
+}
+
+/* Section Heading */
+#skills h2 {
+    color: #9f0808; /* Dark color for heading */
+    margin-bottom: 15px;
+    font-size: 2em; /* Larger font for heading */
+    border-bottom: 2px solid #333; /* Add border below heading */
+    padding-bottom: 5px;
+}
+
+#skills:hover {
+    box-shadow: 0px 6px 12px rgba(201, 8, 8, 0.3); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+
+#experience:hover {
+    box-shadow: 0px 6px 12px rgba(201, 8, 8, 0.3); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+#experience {
+    padding: 20px; /* Add padding to the section */
+    /* background-color: rgb(28, 157, 212);  */
+}
+
+.experience-content {
+    background-color: rgb(86, 219, 228); /* Set background color for experience content */
+    padding: 20px; /* Add padding inside the div */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(233, 16, 16, 0.2); /* Add shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.experience-content:hover {
+    box-shadow: 0px 6px 12px rgba(233, 44, 95, 0.3); /* Increase shadow on hover */
+    transform: scale(1.02); /* Slightly increase size on hover */
+}
+
+/* Section Heading */
+#experience h2 {
+    color: #9f0808; /* Dark color for heading */
+    margin-bottom: 15px;
+    font-size: 2em; /* Larger font for heading */
+    border-bottom: 2px solid #333; /* Add border below heading */
+    padding-bottom: 5px;
+}
+
+/* Experience List Styling */
+.experience-content ul {
+    list-style-type: square; /* Square bullets for the list */
+    margin-top: 10px; /* Space above the list */
+    padding: 0;
+}
+
+.experience-content li {
+    margin-bottom: 10px; /* Space between list items */
+    color: #333; /* Text color */
+    font-size: 1.1em; /* Slightly larger font size */
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+/* Section Heading */
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+.nav-left ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: aqua;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+    color: aqua;
+    box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.5);
+    border-radius: 5px;
+    transform: translateY(-3px);
+}
+
+/* Project container and individual project card styling */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Project card styling */
+.project {
+    width: 45%;
+    /* background-color: rgb(28, 157, 212); */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(9, 225, 66, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: 
+        transform 0.5s ease, 
+        box-shadow 0.5s ease, 
+        background-color 0.5s ease,
+        border-color 0.3s ease; /* Added border color transition */
+}
+#pr{
+    background-color: #eb8f51;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(2, 114, 28, 0.2);
+
+}
+
+
+/* Project heading styling */
+.project h3 {
+    margin-bottom: 10px;
+    color: #ff6600;
+    transition: color 0.3s ease; /* Smooth color transition for the heading */
+}
+
+.project p {
+    color: #f4eded;
+}
+
+/* Hover effect on project cards */
+.project:hover {
+    transform: scale(1.05); /* Slightly increase the size of the card */
+    box-shadow: 0px 6px 12px rgba(12, 205, 22, 0.4); /* Increased shadow on hover */
+    background-color: #3baeb4; /* Change background color on hover */
+    border: 2px solid #00ffbf; /* Add border on hover */
+}
+
+/* Project names animation */
+.project h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.project h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background: #00ffbf; /* Underline color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.project:hover h3::after {
+    transform: scaleX(1);
+}
+
+/* Change heading color on hover */
+.project h3:hover {
+    color: #d70c1d; /* Change heading color on hover */
+}
+
+/* Example project names */
+.project-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Specific project names */
+.project:nth-child(1) h3 {
+    content: "Restaurant Reservation System"; /* Project name */
+}
+
+.project:nth-child(2) h3 {
+    content: "Snake Game"; /* Project name */
+}
+
+.project:nth-child(3) h3 {
+    content: "Portfolio Website"; /* Project name */
+}
+
+.project:nth-child(4) h3 {
+    content: "Assignment 4U"; /* Project name */
+}
+
+/* Additional effects for project card text */
+.project p:hover {
+    color: #d70c1d; /* Change text color on hover */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+#contact {
+    padding: 20px; /* Add padding to the section */
+    /* background-color: rgb(28, 157, 212);  */
+    transition: transform 0.3s ease; /* Smooth transition for the section */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+}
+
+#contact div {
+    padding: 20px; /* Padding inside the div */
+    border-radius: 10px; /* Rounded corners */
+    
+}
+
+/* Contact Paragraph Styling */
+#contact p {
+    margin-bottom: 10px; /* Space between paragraphs */
+    color: #fff; /* White text color */
+    font-size: 1.1em; /* Slightly larger font size */
+}
+
+/* Section Heading */
+#contact h2 {
+    color: #7d0707; /* White color for heading */
+    margin-bottom: 15px;
+    font-size: 2em; /* Larger font for heading */
+    border-bottom: 2px solid #fff; /* White border below heading */
+    padding-bottom: 5px;
+}
+
+/* Hover Effects */
+#contact:hover {
+    box-shadow: 0px 6px 12px rgba(240, 7, 7, 0.3); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Icon Hover Effects */
+#contact a:hover {
+    transform: scale(1.1); /* Scale icons on hover */
+    transition: transform 0.2s ease; /* Smooth transition for icon hover */
+}
+.contact-section {
+    background-color: rgb(21, 213, 226); /* Set background color to red */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(227, 3, 3, 0.2); /* Add shadow */
+    text-align: center; /* Center text inside the div */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.contact-section:hover {
+    box-shadow: 0px 6px 12px rgba(239, 5, 5, 0.3); /* Increase shadow on hover */
+    transform: scale(1.02); /* Slightly increase size on hover */
+}
+
+.contact-section a {
+    margin: 0 10px; /* Space between icons */
+}
+
+.contact-section img {
+    transition: transform 0.3s ease; /* Smooth transition for icons */
+}
+
+.contact-section a:hover img {
+    transform: scale(1.2); /* Slightly increase icon size on hover */
+}
+
+/* Scale up the icons on hover */
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
